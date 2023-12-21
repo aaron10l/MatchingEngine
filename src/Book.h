@@ -5,9 +5,13 @@
 #ifndef MARKET_MAKER_SIMULATION_BOOK_H
 #define MARKET_MAKER_SIMULATION_BOOK_H
 
+#include "Limit.h"
 
-class Book {
-
+class Book { // the actual binary tree
+    Limit *buyTree;
+    Limit *sellTree;
+    Limit *lowestBuy;
+    Limit *highestBuy;
 };
 
 
