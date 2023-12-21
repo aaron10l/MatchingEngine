@@ -15,6 +15,8 @@ public:
     int limit;
     int entryTime;
     int eventTime;
+    Order *prevOrder;
+    Order *nextOrder;
     Limit *parentLimit;
 };
 
