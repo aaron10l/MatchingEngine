@@ -1,15 +1,21 @@
-cmake_minimum_required(VERSION 3.13)  # CMake version check
-project(ExchangeSimulator)               # Create project "simple_example"
-set(CMAKE_CXX_STANDARD 17)            # Enable c++14 standard
+cmake_minimum_required(VERSION 3.13)
+project(ExchangeSimulator)
+set(CMAKE_CXX_STANDARD 17)
 
-# Add main.cpp file of the project root directory as a source file
-# set(main src/main.cpp)
+set(Boost_USE_STATIC_LIBS OFF)
+set(Boost_USE_MULTITHREADED ON)
+set(Boost_USE_STATIC_RUNTIME OFF)
 
-# Add executable target with source files listed in SOURCE_FILES variable
-add_executable(main src/main.cpp
-        src/Book.h
-        src/Limit.h
-        src/Order.h
-        src/Book.cpp
-        src/Limit.cpp
-        src/Order.cpp)
+find_package(Boost REQUIRED)
+
+if(Boost_FOUND)
+    include_directories(${Boost_INCLUDE_DIRS})
+    add_executable(main src/main.cpp src/limits.h
+            src/types.h
+            src/orderbook.h
+            src/orderbook.cpp
+    )
+    target_link_libraries(main ${Boost_LIBRARIES})
+else()
+    message(FATAL_ERROR "Boost not found. Please install Boost or check your Boost installation.")
+endif()
