@@ -11,15 +11,17 @@
 #include <boost/intrusive/list.hpp>
 #include <string>
 
-class orderbook {
+
+class OrderBook {
 public:
+    static OrderBook& get();
     void initialize();
     void shutdown();
     t_orderid limit(t_order& order);
     void cancel(t_orderid orderid);
 
 private:
-    orderbook(){}
+    OrderBook(){}
 
     struct orderbookEntry : public boost::intrusive::slist_base_hook<>{
         t_size size{0};

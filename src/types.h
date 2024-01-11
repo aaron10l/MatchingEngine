@@ -2,6 +2,7 @@
 #define TYPES_H_
 
 #include <string>
+#include <limits>
 
 /* Order Id */
 using t_orderid = unsigned long;
@@ -31,16 +32,4 @@ struct t_order {
 
 using t_execution = t_order;
 
-
-// CONSTANTS
-constexpr t_price kMaxPrice = std::numeric_limits<t_price>::max();
-
-constexpr int kMaxNumOrders = 101000;
-
-constexpr t_price kMinPrice = 1;
-
-constexpr uint32_t kMaxLiveOrders = std::numeric_limits<t_price>::max();
-
-constexpr size_t kFieldLength = 4;
-
-#endif // TYPES_H_
+#endif

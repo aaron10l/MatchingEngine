@@ -10,10 +10,14 @@ find_package(Boost REQUIRED)
 
 if(Boost_FOUND)
     include_directories(${Boost_INCLUDE_DIRS})
-    add_executable(main src/main.cpp src/limits.h
+    add_executable(main
             src/types.h
             src/orderbook.h
             src/orderbook.cpp
+            src/engine.h
+            src/engine.cpp
+            src/limits.h
+            src/limits.h
     )
     target_link_libraries(main ${Boost_LIBRARIES})
 else()

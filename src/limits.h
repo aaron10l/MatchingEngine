@@ -1,17 +1,8 @@
-//
-// Created by Aaron Alvarez on 1/4/24.
-//
+#include <limits>
+#include <cstdint>
+#include "types.h"
 
-/* Maximum price of a limit order
-   655.36 dollars
-   max size of unsigned short */
-#define MAX_PRICE 65536
-
-/* Minimum price of a limit order
-   0.01 dollars */
-#define MIN_PRICE 00001
-
-/* Maximum number of uncrossed orders that
-   may be sitting on the book at a time.
-   Gives the implementor a finite bound */
-#define MAX_LIVE_ORDERS 65536
+constexpr t_price MIN_PRICE = 1;
+constexpr t_price MAX_PRICE = std::numeric_limits<t_price>::max();
+constexpr int MAX_TOTAL_ORDERS = 101000;
+constexpr uint32_t MAX_LIVE_ORDERS = std::numeric_limits<uint32_t>::max();
