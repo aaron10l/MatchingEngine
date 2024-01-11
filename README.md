@@ -8,7 +8,14 @@ A robust simulation of a financial exchange implemented in C++, leveraging the S
    git clone https://github.com/aaron10l/ExchangeSimulator.git
    cd ExchangeSimulator
    ```
-   
+## Project Files
+### Quantcup:
+- limits.h - provides constraints for size of order flow
+- types.h - aliases for common types 
+- engine.h - quantcup orderbook api
+
+### Implementation:
+- orderbook.h
 
 ## Notes & TODOs
 - **Server and Client Implementation:**
