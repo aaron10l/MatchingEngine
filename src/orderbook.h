@@ -23,13 +23,13 @@ public:
 private:
     OrderBook(){}
 
-    struct orderbookEntry : public boost::intrusive::slist_base_hook<>{
+    struct OrderBookEntry : public boost::intrusive::slist_base_hook<>{
         t_size size{0};
         std::string trader;
     };
 
-    typedef boost::intrusive::slist <orderbookEntry, boost::intrusive::cache_last<true> > pricePoint;
-    std::vector<orderbookEntry> arenaBookEntries;
+    typedef boost::intrusive::slist <OrderBookEntry, boost::intrusive::cache_last<true> > pricePoint;
+    std::vector<OrderBookEntry> arenaBookEntries;
     std::vector<pricePoint> pricePoints;
     t_orderid currOrderId;
     t_price askMin;
