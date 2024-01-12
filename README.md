@@ -1,5 +1,5 @@
 # Matching Engine in C++
-A robust simulation of a financial exchange implemented in C++, leveraging the STL and Boost libraries. The orderbook structure is inspired by the quantcup winning submission by voyager, available [here](https://web.archive.org/web/20141222151051/https://dl.dropboxusercontent.com/u/3001534/engine.c).
+A robust simulation of a matching engine implemented in C++, leveraging the STL and Boost libraries. The orderbook structure is inspired by the quantcup winning submission by voyager, available [here](https://web.archive.org/web/20141222151051/https://dl.dropboxusercontent.com/u/3001534/engine.c).
 
 ## Usage
 
