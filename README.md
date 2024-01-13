@@ -8,6 +8,20 @@ A robust simulation of a matching engine implemented in C++, leveraging the STL 
    git clone https://github.com/aaron10l/MatchingEngine.git
    cd MatchingEngine
    ```
+
+2. **Generate build files:**
+   ```bash
+   mkdir build
+   cd build
+   cmake ../
+   ```
+
+3. **Run test:**
+   ```bash
+   ./score
+   ./test
+   ```
+  
 ## Project Files
 ### Quantcup:
 - limits.h - provides constraints for size of order flow
